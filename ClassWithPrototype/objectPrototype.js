@@ -12,3 +12,22 @@ Object.prototype.log = function() {
 const x = { a: 1 };
 
 x.log(); // { a: 1 }
+
+
+// Example trim method
+// String.prototype.trim = function() {
+//     return this.replace(/^\s+|\s+$/g, '');
+// }
+if(!String.prototype.trim){
+    try {
+        String.prototype.trim = function() {
+            return this.replace(/^\s+|\s+$/g, '');
+        }
+    } catch (e) {
+        return this;
+    }
+}
+
+const str = '   Hello   '.trim();
+
+str.log(); // Hello
