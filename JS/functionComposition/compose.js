@@ -1,0 +1,1 @@
+// Calcular el promedio de ingresos de tosos los usuarios
